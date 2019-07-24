@@ -42,7 +42,7 @@ Get-ChildItem .\  -Filter *.nupkg | ForEach-Object -Process{
 
 Write-Host('######nuget包↓↓↓↓↓↓#########')
 $index=0
-foreach($i in $pjfiles){
+foreach($i in $pgfiles){
 	$index=$index+1
 	Write-Host('['+$index.ToString()+']'+$i)
 }
