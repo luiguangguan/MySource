@@ -64,10 +64,12 @@ while(!($serverindex -match $parttern)){
 	$serverindex = Read-Host -Prompt '请选择服务地址'
 }
 
+#Write-Host('你选择的地址是：'+$servers[$serverindex-]);
+
 $nugetKey=Read-Host -Prompt '请请输入nuget服务的key'
 
 Write-Host('正在发布...')
 
-nuget push $pgfiles[$fileNum] $nugetKey -Source $servers[$serverindex]
+nuget push $pgfiles[$fileNum-1] $nugetKey -Source $servers[$serverindex-1]
 
 $key = Read-Host -Prompt '按回车键退出'
